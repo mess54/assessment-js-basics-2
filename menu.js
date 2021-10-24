@@ -33,7 +33,7 @@
 //CODE HERE
 
 const pizza = {
-    name: ' White Pizza',
+    name: 'White Pizza',
     price: 15.99,
     category: 'Specialty Pizzas',
     popularity: 3,
@@ -98,7 +98,48 @@ console.log(category)
 */
 
 //CODE HERE
+let foodArr = [{
+    name: 'Grilled Cheese',
+    price: 5.99,
+    category: 'Sandwiches',
+    popularity: 7,
+    rating: 4,
+    tags: ["vegetarian", "kids"]
+},
+{
+    name: 'Mac and Cheese',
+    price: 8.99,
+    category: 'Pasta',
+    popularity: 8,
+    rating: 4.7,
+    tags: ["vegetarian", "kids"]
 
+},
+{
+    name: 'French Fries',
+    price: 3.99,
+    category: 'Sides',
+    popularity: 5,
+    rating: 4.5,
+    tags: ["vegetarian", "kids"]
+},
+{
+    name: 'Turkey and Provolone',
+    price: 9.99,
+    category: 'Sandwiches',
+    popularity: 2,
+    rating: 4.9,
+    tags: ["sourdough", "cold sandwich"]
+},
+{
+    name: 'Meatball Sub',
+    price: 10.99,
+    category: 'Sanwiches',
+    popularity: 1,
+    rating: 4.8,
+    tags: ["hot sandwiches", "extra meat"]
+}
+]
 
 
 //////////////////PROBLEM 4////////////////////
@@ -113,9 +154,13 @@ console.log(category)
     your food objects has.
 */
 
-//CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+
+const filteredFood = foodArr.filter((element) => {
+    if(element.tags.includes("vegetarian")) {
+        return element;
+    }
+});
 
 
 
@@ -158,8 +203,31 @@ console.log(category)
     Return the filtered array from the entire function
 */
 
-//CODE HERE
+// const filterByProperty = (property, number, type) => {
+//     let filteredArr = [];
+//     if(type === "above") {
+//         foodArr.filter((element) => {
+//             if(element[property] > number) {
+//                 filteredArr.push(element);
+//             }
+//         })
+//     } else if(type === "below") {
+//         if(element[property] < number) {
+//             filteredArr.push(element)
+//         }
+//     }
+// }
 
+ const filterByProperty = (property, number, type) => {
+     const filteredFood = foodArr.filter((element) => {
+         if(type === "above") {
+            return element[property] >= number;
+         } else if(type === "below") {
+            return element[property] <= number;
+         }
+     })
+     return filteredFood;
+ }
 
 /*
     Invoke the `filterByProperty` function passing

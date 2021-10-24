@@ -20,8 +20,8 @@
 */
 
 class Employee {
-    this.name: name
-    this.shift: shift
+    this.name; name;
+    this.shift; shift;
 }
 
 
@@ -57,7 +57,7 @@ class Employee {
     dot or bracket notation.
 */
 
-//CODE HERE
+const empTwo = {...empOne, name: "Nick"};
 
 
 

@@ -81,13 +81,12 @@ console.log(canWeDeliver(85204))
 // CODE HERE
 const canWeDeliverTwo = (zipCode) => {
     for(let i = 0; i < deliveryAreaZipCodes.length; i++) {
-        if(i = zipCode) {
-            console.log("You're in our delivery zone!")
-        } else {
-            console.log("Sorry we can't deliver to that address")
-        }
-    }
-}
+        if(deliveryAreaZipCodes[i] === zipCode) {
+            return "You're in our delivery zone!"
+            }
+        } return "Sorry we can't deliver to that address"
+    };
+
 console.log(canWeDeliverTwo(94508))
 
 //////////////////PROBLEM 3////////////////////
@@ -122,9 +121,7 @@ const deals = [
     to be itself, but use the `replace` method
     to replace the 15 with a 10.
 */
-const{title, desc} = deals
-title.replace['15% Off!'] = '10% Off!'
-console.log(deals.title)
+deals[0].title = deals[0].title.replace("15", "10");
 
 
 
