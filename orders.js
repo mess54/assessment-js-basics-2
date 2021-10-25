@@ -40,9 +40,9 @@ class Ticket {
     updateStatus(newStatus) {
         this.status = newStatus;
             console.log(`The order for customer ${this.customerID} is now ${this.status}`)
-    }
+    };
 }
-console.log(updateStatus("complete"));
+
 
 
 
