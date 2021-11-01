@@ -22,8 +22,10 @@
 */
 
 //CODE HERE
-const greetUser = (username) => console.log(`Welcome back, ${username}`)
-greetUser(`Andrew`)
+const greetUser = (username) => {
+    return `Welcome back, ${username}`
+}
+console.log(greetUser(`Andrew`))
 
 
 
