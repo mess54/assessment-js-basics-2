@@ -57,7 +57,7 @@ class Ticket {
     customer: 575
 */
 
-//CODE HERE
+let firstTicket = new Ticket("Pizza, bread and soda", "7:03 PM", 575)
 
 
 /*
@@ -66,4 +66,4 @@ class Ticket {
     'cooking'
 */
 
-//CODE HERE
+firstTicket.updateStatus("cooking")

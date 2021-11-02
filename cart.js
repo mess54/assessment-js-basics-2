@@ -35,8 +35,11 @@ const cart = [
 
 //CODE HERE
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
+const summedPrice = cart.reduce((acc, curr) => {
+    return acc + curr.price
+}, 0)
 
+console.log(summedPrice)
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -54,7 +57,12 @@ const cart = [
 */
 
 //CODE HERE
-
+const calcFinalPrice = (cartTotal, couponValue, tax) => {
+    tax = summedPrice * tax
+    cartTotal = summedPrice
+    return cartTotal + tax - couponValue
+}
+console.log(calcFinalPrice(summedPrice, 3, .06))
 
 
 //////////////////PROBLEM 3////////////////////
@@ -78,7 +86,7 @@ const cart = [
 */
 
 /*
-    TEXT ANSWER HERE
+    Retaurant would want to know customers' names, dietary preferences, age, relationship status
 
 */
 
@@ -87,4 +95,9 @@ const cart = [
     guidelines.
 */
 
-//CODE HERE
+let customer = {
+    name: "John",
+    age: 54,
+    diet: "vegetarian",
+    relationship: "married",
+}

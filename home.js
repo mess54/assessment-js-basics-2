@@ -85,8 +85,10 @@ const canWeDeliverTwo = (zipCode) => {
     for(let i = 0; i < deliveryAreaZipCodes.length; i++) {
         if(deliveryAreaZipCodes[i] === zipCode) {
             return "You're in our delivery zone!"
-            }
-        } return "Sorry we can't deliver to that address"
+        } else {
+            return "Sorry we can't deliver to that address"
+        }
+        }
     };
 
 console.log(canWeDeliverTwo(94508))
@@ -125,7 +127,7 @@ const deals = [
 */
 deals[0].title = deals[0].title.replace("15", "10");
 
-
+console.log(deals)
 
 /*
     The restaurant is going to continue its
@@ -140,4 +142,5 @@ deals[0].title = deals[0].title.replace("15", "10");
     to be displaying wrong on the live site.
 */
 
-//CODE HERE
+deals[1].desc = deals[1].desc.replace("March", "April").trim()
+console.log(deals)
